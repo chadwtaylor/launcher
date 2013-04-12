@@ -52,7 +52,7 @@ Refer to `application.yml` for details and links to sign up for your accounts.
 
 You will at the most need assigned API keys to enable your third-party services with Launcher. Once you have those API keys in hand, update `config/application.yml`
 
-### Get Launcher running
+### Get Launcher up and running
 
 1. run `rake db:migrate` (make sure your database is set up first)
 2. run `rake db:seed`
