@@ -1,7 +1,7 @@
 Launcher
 ========
 
-Launcher allows you to build your own crowdfunding platform. It also support many popular third-party services such as Stripe, Airbrake, Zendesk and more!
+Launch your own crowdfunding platform. Supported and optional third-party services are included such as Stripe, Airbrake, Zendesk and more!
 
 Disclaimers
 -----------
@@ -12,9 +12,23 @@ Examples are the best teaching tools so we're using NeverFold's real-world exper
 
 We strongly encourage you to come up with your own Privacy Policy and Terms -- we have left those intact as a guidance for your next big thing!
 
-Lastly but not least, this project assumes you are comfortable with Rails.
+Payment processing is used with Stripe.
+
+Lastly but not least, this project assumes you are comfortable with Rails and we are not responsible for anything that goes wrong with your project.
 
 Good luck!
+
+Supported Third-Party Services
+------------------------------
+* Stripe
+* Facebook (share to feed)
+* Twitter (tweet button)
+* Zendesk
+* Airbrake
+* MailChimp
+* Google Analytics
+* Woopra
+* GoSquared
 
 Getting Started
 ---------------
@@ -23,32 +37,16 @@ Getting Started
 
 
 
+
+
 Rails Installation
 ------------------
-
-Instructions for Lanucher (couresty of NeverFold)
-
-- starting point for you to build your own solution
-
-- Legals (privacy policy and terms -- you're welcome to use it; but it is recommended you draft your own)
 
 - Figaro gem used to define application configurations (see config/application.yml.example)
 
 - seed.rb to feed data into tables
 
 - edit route.rb to define routings especially for facebook, twitter, blog, etc..
-
-- Supported Third-Party Integrations
-  - Stripe (required; at least a developer account will suffice)
-  - Facebook (share to feed)
-  - Twitter (tweet button)
-  - Zendesk
-  - Airbrake
-  - MailChimp
-  - Google Analytics
-  - Woopra
-  - GoSquared
-  - Geotagging using Geocoder
 
 
 BENEFITS OF LAUNCHER
