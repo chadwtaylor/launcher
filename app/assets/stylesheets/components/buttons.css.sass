@@ -1,0 +1,28 @@
+﻿
+.button
+	background-color: $blue
+	border: 1px solid $black25
+	@include radius(2px)
+	display: inline-block
+	color: white
+	/*font-weight: bold*/
+	cursor: pointer
+	/*font-family: "Helvetica Neue", Helvetica, "Lucida Sans", arial, sans-serif*/
+	padding: 6px 22px
+	font-size: 16px
+	text-shadow: 0px -1px 1px $black50
+
+	&.grey
+		background-color: #eee
+		border: 1px solid #ddd
+
+	&.yellow
+		background-color: #ffcb05
+		border: 1px solid #d4b12e
+
+
+	.small
+		font-size: 14px
+		text-shadow: 0px 1px 1px $white40
+		color: darken($blue, 30%)
+

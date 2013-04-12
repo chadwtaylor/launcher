@@ -1,0 +1,58 @@
+
+%footer.clearfix
+	- unless params[:controller] == "prelaunch"
+		%section.clearfix
+			.left
+				- unless aside_enabled?
+					.col
+						.title Discover
+						.links
+							%a{href:"/about"}
+								.link About
+							%a{href:"/how_it_works"}
+								.link How It Works
+							%a{href:"/faq"}
+								.link FAQ
+							%a{href:"#{ENV['BLOG']}"}
+								.link Blog
+							%a{href:"/press_media"}
+								.link Press &amp; Media
+
+				.col
+					.title Stay in touch
+					.links
+						= contact_us_link("<div class='link'>Contact</div>".html_safe)
+						%a{href:"#{ENV['FACEBOOK']}"}
+							.link Facebook
+						%a{href:"#{ENV['TWITTER']}"}
+							.link Twitter
+
+			.legal.right
+				%a{href:"/privacy"}
+					.link Privacy Policy
+				%a{href:"/terms"}
+					.link Terms of Use
+				&copy;
+				= "#{ENV['ORGANIZATION']}."
+				All Rights Reserved.
+
+= javascript_include_tag "application"
+
+= yield :javascript
+
+- if ENV['ZENDESK_DROPBOX_ID'].present?
+
+	%script{type:"text/javascript", src:"//assets.zendesk.com/external/zenbox/v2.5/zenbox.js"}
+
+	%style
+		@import url(//assets.zendesk.com/external/zenbox/v2.5/zenbox.css);
+
+	%script{type:"text/javascript"}
+		if (typeof(Zenbox) !== "undefined") {
+		Zenbox.init({
+		dropboxID: "#{ENV['ZENDESK_DROPBOX_ID']}",
+		url: "#{ENV['ZENDESK_URL']}",
+		tabID: "support",
+		hide_tab: true
+		});
+		}

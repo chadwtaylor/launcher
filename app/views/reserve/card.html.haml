@@ -1,0 +1,40 @@
+- content_for :title do
+	Pledge with your card
+
+- content_for :body do
+
+	= form_tag("/reserve/card_submit", class:"form_credit_card", remote:true) do
+
+		.group.first.clearfix
+			.label
+				When will my card be charged?
+			.contents
+				If the funding goal is successfully achieved,
+				%span.highlight
+					your card will be charged on
+					= "#{crowdfunding_deadline}."
+				&nbsp; If unsuccessful, your card will NOT be charged.
+
+		.group.clearfix
+			.label
+				Enter your credit card information
+
+				.notes
+
+			.contents
+				%a{href:"https://stripe.com/help/security", target:"_"}
+					%img{src:"/assets/powered-by-stripe.jpg", style:"margin-left:50px; margin-bottom:20px; "}
+
+			.contents
+				= render partial:'/components/credit_card'
+
+
+		.group.clearfix
+			.label
+				Billing Zip Code
+			.contents
+				= text_field_tag "card[zip_code]", (Rails.env.development? ? "94536" : "")
+
+		.group.clearfix
+			.contents
+				.button Continue to next step

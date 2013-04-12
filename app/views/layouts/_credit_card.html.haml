@@ -1,0 +1,34 @@
+
+.credit_card.clearfix
+
+	.title
+		Credit Card
+
+	.row{style:"margin-bottom: 20px;"}
+		.label
+			Card Number
+		.content
+			= #text_field_tag "card[number]", "4012888888881881", placeholder:"1000-2000-3000-4000" # Valid Card
+			= # text_field_tag "card[number]", "4000000000000101", placeholder:"1000-2000-3000-4000" # Invalid CVC
+			= text_field_tag "card[number]", "4000000000000036", placeholder:"1000-2000-3000-4000" # Invalid Zip
+
+	.group.clearfix{style:"margin-bottom:20px;"}
+		.row.left
+			.label
+				Expiration Date
+			.content
+				= text_field_tag "card[expire_month]", "01", placeholder:"month", class:"month"
+				= text_field_tag "card[expire_year]", "2015", placeholder:"year", class:"year"
+
+		.row.right
+			.label
+				CVC CODE
+			.content
+				= text_field_tag "card[cvc]", "101", placeholder:"101", class:"cvc"
+
+	.row{style:"margin-bottom: 5px;"}
+		.label
+			Name on Card
+		.content
+			= text_field_tag "card[full_name]", "John Doe", placeholder:"John Doe"
+

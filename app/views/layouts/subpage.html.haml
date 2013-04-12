@@ -1,0 +1,50 @@
+!!!
+%html{"xmlns:fb"=>"http://ogp.me/ns/fb#"}
+	%head
+		= render :partial => "layouts/head"
+
+	%body{class:"subpage#{' aside' if aside_enabled?} #{params[:controller]}", "data-tab"=>"#{params[:controller]}/#{params[:action]}"}
+
+		= render partial:'layouts/header'
+
+		%section.body.clearfix
+
+			- if aside_enabled?
+
+				%aside
+
+					.group
+						%a{href:"/about", "data-tab"=>"about/index"}
+							.topic.tab About
+
+					.group
+						%a{href:"/faq", "data-tab"=>"faq/index"}
+							.topic.tab FAQ
+
+					.group
+						%a{href:"http://blog.neverfold.com", "data-tab"=>"blog"}
+							.topic Blog
+
+					.group
+						%a{href:"/press_media", "data-tab"=>"press_media/index"}
+							.topic.tab Press &amp; Media
+
+						- if false
+							%a{href:"/press_media/digital_media", "data-tab"=>"press_media/digital_media"}
+								.link.tab Digital Media
+							%a{href:""}
+								.link.tab Press Releases
+							%a{href:""}
+								.link.tab Media
+
+			.main_content
+				.flash
+					- if flash[:error]
+						.error= flash[:error]
+					- elsif flash[:notice]
+						.notice= flash[:notice]
+
+				%h2= yield :title
+				= content_for?(:body) ? yield(:body) : yield
+
+		= render :partial => "layouts/footer"

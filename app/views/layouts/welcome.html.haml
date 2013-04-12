@@ -1,0 +1,13 @@
+!!!
+%html{"xmlns:fb"=>"http://ogp.me/ns/fb#", xmlns:"http://www.w3.org/1999/xhtml"}
+	%head
+		= render :partial => "layouts/head"
+
+	%body.welcome
+
+		#fb-root
+		%script{src:"http://connect.facebook.net/en_US/all.js"}
+
+		= yield
+
+		= render :partial => "layouts/footer"

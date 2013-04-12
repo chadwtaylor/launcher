@@ -1,0 +1,28 @@
+- content_for :title do
+	Generiousity
+
+- content_for :body do
+
+	= form_tag("/reserve/contribution_submit", remote:true) do
+
+		.group.first.clearfix
+			.label
+				Contribution
+
+				.notes
+					%br
+
+					Thank you for your contribution. Your support will help make NeverFold a reality.
+					%br
+					%br
+					%i Thank you, really!
+
+			.contents
+
+				.row
+					.label Enter any amount in dollars
+					= text_field_tag "contribution", nil, placeholder:"$"
+
+		.group.clearfix
+			.contents
+				.button.submit Continue to next step

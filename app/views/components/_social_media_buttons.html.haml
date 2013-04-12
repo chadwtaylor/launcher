@@ -1,0 +1,13 @@
+.clearfix
+
+	- page_location = "/#{params[:controller]}/#{params[:action]}"
+
+	.block{style:"width:60px; top:5px; z-index:10; cursor:pointer; float:left;"}
+		%a{onclick:"postToFeed(); return false;"}
+			%img{src:"/assets/social_media/fbshare.jpg", style:"width:60px; height:18px; top:-4px;"}
+
+	.block{style:"margin-left:15px; float:left;"}
+		%a{href:"https://twitter.com/share", class:"twitter-share-button", "data-text"=>"#{ENV['TWITTER_DESCRIPTION']}", "data-url"=>"#{ENV['TWITTER_URL']}", "data-via"=>"#{ENV['TWITTER_VIA']}", "data-lang"=>"en", "data-count"=>"none"} Tweet
+		%script
+			!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+

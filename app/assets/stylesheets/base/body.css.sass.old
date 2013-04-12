@@ -1,0 +1,105 @@
+﻿
+#page-body
+
+	.page-content
+		width: $page_width
+		@include centerize
+		padding-top: 80px
+
+
+		h1
+			/*color: #c81f1f*/
+			color: #2c98ec
+			font-size: 40px
+			text-align: center
+			text-shadow: 0px 1px 0px white
+
+			.strikethrough
+				background: url('/assets/strikethrough.png') no-repeat
+				width: 97px
+				height: 24px
+				position: absolute
+				bottom: 8px
+				right: 136px
+
+			.never_text
+				background: url('/assets/never_text.png') no-repeat
+				width: 93px
+				height: 24px
+				position: absolute
+				bottom: 8px
+				right: 36px
+
+		h2
+			font-family: 'open-sans', 'Arial', sans-serif
+			font-size: 17px
+			color: #666
+			text-align: center
+			margin: 25px auto 0px auto
+			width: 600px
+
+
+		.subscribe-block
+			margin-top: 30px
+			text-align: center
+
+			.input_block
+				border: 10px solid rgba(0,0,0,0.1)
+				padding: 0px
+				display: inline-block
+				-moz-border-radius: 5px
+				-webkit-border-radius: 6px
+
+				input[type=text]
+					font-size: 25px
+					padding: 10px
+					width: 500px
+					margin: 0px
+
+					&.error
+						border: 1px solid #c81f1f
+
+			.error
+				margin-top: 5px
+				text-align: left
+				color: #c81f1f
+				padding-left: 54px
+				font-size: 13px
+
+		.thank-you
+			margin-top: 30px
+			@include radius(4px)
+			text-align: center
+			background-color: rgba(0,0,0,0.15)
+			margin-left: auto
+			margin-right: auto
+			width: 550px
+			padding: 20px
+			font-size: 24px
+			color: white
+			text-shadow: 0px 1px 1px rgba(0,0,0,0.15)
+
+.promise
+	font-family: 'Averia Sans Libre', cursive
+	color: rgba(0,0,0,0.35)
+	text-align: left
+	padding: 4px 0px 0px 56px
+	font-size: 17px
+
+.no-folding
+	font-family: 'Averia Sans Libre', cursive
+	color: rgba(0,0,0,0.35)
+	text-align: center
+	padding-top: 25px 
+	font-size: 20px
+
+
+.alt #page-body
+
+	.page-content
+		padding-top: 30px
+		color: rgba(0,0,0,1)
+
+		h2
+			color: rgba(0,0,0,0.45)
+

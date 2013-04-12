@@ -1,0 +1,27 @@
+- content_for :title do
+	Your Account
+
+- content_for :body do
+
+	= form_tag("/reserve/email_submit", remote:true) do
+
+		.group.first.clearfix
+			.label
+
+				.notes
+					%br
+
+
+			.contents
+
+				.row
+					.label Email Address
+					= text_field_tag "email", ""
+					%br
+					%br
+					.label
+						%i Absolutely no spam. Scout's honor.
+
+		.group.clearfix
+			.contents
+				.button.submit Continue to next step

@@ -1,0 +1,116 @@
+- content_for :title do
+	NeverFold Product
+
+- content_for :body do
+
+	.question
+		%p.bold Tell me how NeverFold works?
+		%p
+			NeverFold is a time-saving closet solution composed of two adjustable rods that allow you to drape clothing rather than folding it, resulting in less wrinkles and more closet space.
+
+		%p
+			Nothing beats a visual example so check out this
+			= link_to 'very brief video', '/how_it_works'
+			on how you can make folding obsolete!
+
+	.question
+		%p.bold What does Poplar, Bamboo and Dark Walnut look like?
+
+		.wood
+			.texture.poplar
+			.label poplar
+
+		.wood
+			.texture.bamboo
+			.label caramelized bamboo
+
+		.wood
+			.texture.dark_walnut
+			.label dark western walunt
+
+	.question
+		%p.bold What are the measurements?
+		%p
+			Length is either 36" or 48".
+			%br
+			Distance is 18".
+
+	.question
+		%p.bold What are the differences between 36" and 48"?
+		%p 36-inch mount: This is good for 1 group of clothing (ie: t-shirts)
+		%p 48-inch mount: This is good for 2 groups of clothing (ie: t-shirts and pants)
+		%p
+
+	.question
+		%p.bold How much weight can it hold?
+		%p Recommended max weight is 30 lbs.
+		%p To put things in perspective, 40 t-shirts weights approximately 18 lbs.
+		%p
+			NeverFold was able to hold my 44 lbs son nonetheless (but highly not recommend).
+		%p
+			%img{src:"/assets/media/neverfold-stress-test-small.jpg", style:"border: 1px solid #bbb;"}
+
+	%h2
+		%a{name:"crowdfunding"} Crowdfunding
+
+	.question
+		%p.bold What is crowdfunding?
+		%p
+			Crowdfunding is a funding platform. A deadline for a funding goal is established.
+			If people like the concept of NeverFold, they can pre-order one to help make it happen.
+			If NeverFold succeeds in reaching its funding goal, all backers' (those who pre-ordered)
+			credit cards will be charged after the deadline.
+
+	.question
+		%p.bold What happens if the project falls short?
+		%p
+			No one is charged. Funding on NeverFold is all-or-nothing.
+
+	.question
+		%p.bold Why do I need to raise $100,000 before manufacturing NeverFold?
+		%p
+			$100,000 is the magical number to keep NeverFold affordable and have it manufactured in the United States.
+			NeverFold comes with a custom-made non-slip surface and snap-on rods designed by Paul Carlson, a Deaf industrial designer.
+			A customized mold and an U.S. based factory will be needed to produce those parts.
+			Rather than seek investors for those manufacturing costs, I am reaching out to the community for pre-orders and
+			small investments to make NeverFold a reality.
+
+
+	%h2 Orders
+
+	.question
+		%p.bold When will my credit card be charged?
+		%p
+			If the funding goal is successfully achieved, your card will be
+			charged on Thursday, May 2nd at 11:00pm EST.
+
+	.question
+		%p.bold When will NeverFold be shipped?
+		%p Late summer.
+
+	.question
+		%p.bold I want to change or cancel my reservation.
+		%p
+			Please contact
+			= contact_us_link "NeverFold Support"
+			and include your email address, we'll be more than happy to take care of it.
+
+	.question
+		%p.bold Do you have a refund policy?
+		%p
+			Yes. We have a
+			%a{href:"/legals/refund_policy"} generic refund policy.
+
+	%h2 Contact Us
+
+	.question
+		%p
+			Really, contact us at
+			= contact_us_link "NeverFold Support"
+			anytime! We'll respond as quickly as possible!
+
+	%a{href:"/reserve"}
+		.button{style:"font-size:40px; padding: 10px 40px; text-align: center;"}
+			Pre-Order Your NeverFold Today!
+			.small{style:"font-size:20px;"}
+				Starting at $29

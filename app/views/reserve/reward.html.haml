@@ -1,0 +1,87 @@
+- content_for :title do
+	Select Your Reward
+
+- content_for :body do
+
+	.group.rewards.first.clearfix
+		.label
+
+			.notes
+
+				.question
+					%p.bold What does Poplar, Bamboo and Dark Walnut look like?
+
+					.wood
+						.texture.poplar
+						.label poplar
+
+					.wood
+						.texture.bamboo
+						.label caramelized bamboo
+
+					.wood
+						.texture.dark_walnut
+						.label dark western walnut
+
+				.question
+					%p.bold What are the measurements?
+					%p
+						Length is either 36" or 48".
+						%br
+						Distance is 18".
+
+				.question
+					%p.bold What are the differences between 36" and 48"?
+					%p 36-inch mount: This is good for 1 group of clothing (ie: t-shirts)
+					%p 48-inch mount: This is good for 2 groups of clothing (ie: t-shirts and pants)
+					%p
+
+				.question
+					%p.bold How much weight can it hold?
+					%p Recommended max weight is 30 lbs.
+					%p To put things in perspective, 40 t-shirts weights approximately 18 lbs.
+					%p
+						%img{src:"/assets/media/neverfold-stress-test-small.jpg", style:"border: 1px solid #bbb;"}
+
+				.question
+					%p
+						%i NeverFold is handmade by a skilled wood crafter.
+
+
+
+		.contents
+			.reward_group
+				= form_tag("/reserve/reward_submit", remote:true) do
+					= hidden_field_tag "reward[amount]"
+					= hidden_field_tag "reward[subject]"
+					= hidden_field_tag "reward[summary]"
+					- @rewards.each do |reward|
+
+						- sold_out = false
+
+						- if reward.backers_limit.present?
+							- count = @limited_backers[reward.id]
+							- count = 0 unless count
+							- sold_out = (reward.backers_limit - count) <= 0
+
+						.reward.clearfix{"data-reward-id"=>"#{reward.id}", "data-reward-amount"=>"#{reward.amount / 100}", "data-reward-summary"=>"#{reward.summary}", "data-reward-subject"=>"#{reward.subject}", "data-disabled"=>"#{sold_out}"}
+							.selection
+								.radio= radio_button_tag "reward[id]", reward.id, nil, disabled:sold_out
+								.amount= "$#{(reward.amount / 100).to_s}" if reward.amount > 0
+							.details.clearfix
+								.subject
+									- if reward.subject.downcase.include? "bamboo"
+										.eco
+									= reward.subject
+								.description= reward.summary
+
+								- if reward.backers_limit.present?
+									.limit
+										= sold_out ? "#{reward.backers_limit} Sold Out" : "Limited (#{reward.backers_limit.to_i - count.to_i} of #{reward.backers_limit} left)"
+
+								- else
+									- count = @backers_counter[reward.id]
+									- if count.present?
+										- #.total_backers= "#{count} backer#{'s' if count.to_i > 1}"
+										.total_backers= "#{count} #{(count.to_i > 1 ? 'people' : 'person')} ordered this"
+

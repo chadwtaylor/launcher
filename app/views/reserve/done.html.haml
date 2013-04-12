@@ -1,0 +1,26 @@
+- content_for :title do
+	Heartfelt Thanks and Congratulations
+
+- content_for :body do
+
+	.group.first.clearfix
+		.label
+			You're an offical backer!
+
+		.contents
+
+			.row
+				%p From the bottom of my heart, thank you for backing NeverFold.
+				%p
+					Help me make NeverFold a reality so you can actually get your order!
+				%p
+					1. Hit the "Facebook Share" button.
+					%br
+					2. Tweet to let everybody know you backed NeverFold.
+
+				%p
+					= render partial:"/components/social_media_buttons"
+
+				%p 
+					Many thanks for your support!
+

@@ -1,0 +1,63 @@
+﻿
+body.welcome
+	header
+		background: url('/assets/welcome/bg_closet_blur.jpg') center top repeat-x
+		height: 500px
+
+		section
+			position: relative
+			width: $page_width
+			@include centerize
+			padding: 0px $page_gutter
+
+	.logo
+		background: url('/assets/welcome/neverfold_logo.png') no-repeat
+		width: 271px
+		height: 64px
+		position: absolute
+		top: 50px
+		left: 110px
+
+body.subpage 
+
+	header 
+		@include linear-gradient(rgba(75,75,75,0.85), rgba(0,0,0,0.85))
+		border-bottom: 1px solid #eaeaea
+		height: 80px
+		color: white
+
+		.logo
+			background: url('/assets/neverfold_logo_subpage.png') no-repeat
+			width: 181px
+			height: 44px
+			top: 18px
+			position: relative
+
+		section
+			position: relative
+			width: $page_width
+			@include centerize
+			padding: 0px $page_gutter
+
+		nav > *
+			display: inline-block
+
+		nav
+			position: absolute
+			right: 20px
+			top: 20px
+
+			.link
+				position: relative
+				margin-right: 20px
+				text-shadow: 0px 2px 2px black
+				font-size: 14px
+				border: 0px
+				padding: 4px 8px
+				@include radius(3px)
+
+				&.hovered
+					background-color: white
+					color: black
+					text-shadow: none
+

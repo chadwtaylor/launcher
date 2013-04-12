@@ -1,0 +1,128 @@
+﻿
+.reward_group
+	border: 1px solid #c6d9e3
+	margin: 0px
+
+	.reward
+		margin: 0px
+		border-bottom: 1px solid #c6d9e3
+		padding: 10px
+		background-color: #f4f9fc
+		cursor: pointer
+
+		&:last-child
+			border: 0px
+
+		.selection
+			float: left
+
+			.radio, .amount
+				display: inline-block
+
+			.amount
+				margin-left: 10px
+				font-weight: 600
+
+		.details
+			float: right
+			width: 460px
+
+			.subject
+				font-weight: 600
+
+			.total_backers
+				color: #888
+				font-weight: 400
+				margin-top: 4px
+				font-size: 12px
+				font-style: italic
+
+			.limit
+				margin-top: 4px
+				color: $black80
+				font-size: 12px
+				background-color: $yellow
+				border: 1px solid $black10
+				display: table
+				padding: 2px 5px 2px 5px
+				font-weight: 600
+				text-shadow: 0px 1px 1px $white90
+				@include radius(3px)
+
+		&.hovered
+			background-color: $blue
+			color: white
+			text-shadow: 0px -1px 1px $black20
+
+			.total_backers
+				color: white
+
+
+	.reward[data-disabled=true] 
+		background-color: #f7fcff
+
+		> *
+			@include transparency(30)
+
+.subscribe
+	border: 1px solid $black15
+	background-color: #eee
+	margin-top: 20px
+	font-size: 14px
+	@include radius(3px)
+	padding: 5px 10px
+	display: inline-block
+
+.gender
+	background-color: #f4f9fc
+	border: 1px solid #c6d9e3
+	display: inline-block
+	width: 280px
+	@include radius(5px)
+
+	&.first
+		margin-right: 16px
+
+	.title
+		padding: 5px 10px
+		background-color: #c6d9e3
+		color: $black60
+		font-weight: 700
+		text-shadow: 0px 1px 1px $white90
+		text-align: center
+		font-size: 20px
+
+	.sizes
+		padding: 15px
+
+		.size
+			border: 1px solid #c6d9e3
+			margin-bottom: 15px
+			background-color: white
+			font-weight: 700
+			font-size: 36px
+			padding: 10px 0px
+			text-align: center
+			color: #555
+
+			&:last-child
+				margin: 0px
+
+			&.hovered
+				background-color: $blue
+				color: white
+				text-shadow: 0px -1px 0px $black50
+				border: 1px solid $black20
+				cursor: pointer
+
+.rewards
+
+	.eco 
+		background: url("/assets/icon_eco.png")
+		width: 20px
+		height: 20px
+		display: inline-block
+		top: 2px
+		margin-right: 5px
+
+

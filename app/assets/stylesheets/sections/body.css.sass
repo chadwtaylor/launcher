@@ -1,0 +1,117 @@
+﻿p
+	&.bold
+		font-weight: 700
+	&.statement
+		font-weight: 300
+		font-size: 22px
+		color: #777
+
+.main_content, p
+	a, a:hover, a:visited
+		color: $blue
+
+a[name], a:hover[name], a:visited[name]
+	color: inherit
+
+.flash
+	.error, .notice
+		border: 1px solid $black20
+		color: white
+		font-size: 18px
+		margin-bottom: 20px
+		padding: 6px 10px
+		@include radius(4px)
+
+	.error
+		background-color: $red
+		text-shadow: 0px 1px 0px $black20
+	.notice
+		background-color: $green
+		color: $black90
+		text-shadow: 0px 1px 1px $white70
+
+section.body
+
+	width: $page_width - 40
+	margin-top: 20px
+	@include centerize
+
+	input[type='text']
+		padding: 6px 10px
+		border: 1px solid #aaa
+		@include radius(2px)
+		font-size: 20px
+		color: #444
+
+		&.error
+			border: 1px solid $red
+			color: $red
+
+	input[type=text], textarea 
+		-webkit-transition: all 0.15s ease-in-out
+		-moz-transition: all 0.15s ease-in-out
+		-ms-transition: all 0.15s ease-in-out
+		-o-transition: all 0.15s ease-in-out
+		outline: none
+		padding: 3px 0px 3px 3px
+		margin: 5px 1px 3px 0px
+		border: 1px solid #DDDDDD
+ 
+	input[type=text]:focus, textarea:focus 
+		box-shadow: 0 0 5px $blue
+		padding: 3px 0px 3px 3px
+		margin: 5px 1px 3px 0px
+		border: 1px solid $blue
+
+	.main_content
+		border: 1px solid #AABBC4
+		background-color: white
+		padding: 30px
+		color: #444
+
+		.group 
+			margin-top: 24px
+			border-top: 1px solid #ddd
+			padding-top: 15px
+
+			&.first
+				border: 0px
+
+			&> .label
+				width: 290px
+				font-weight: 600
+				font-size: 17px
+				float: left
+
+			&> .contents
+				width: 580px
+				margin: 0px
+				padding: 0px
+				float: right
+
+				.row
+					margin-bottom: 15px
+				.label
+					font-size: 14px
+					color: #666
+
+		.notes
+			font-size: 14px
+			color: #777
+			font-weight: 400
+			margin-top: 5px
+
+
+
+
+body.subpage.aside section.body
+
+	aside
+		width: 188px
+		float: left
+
+	.main_content
+		width: $page_width - 230
+		float: right
+		min-height: 350px
+

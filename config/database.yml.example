@@ -1,0 +1,17 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  database: neverfold_development
+  host: localhost
+  port: 5432
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  database: neverfold
+  username: admin
+  password: abc123def456
+  host: abc.amazonaws.com
+  port: 5432

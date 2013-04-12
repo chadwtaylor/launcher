@@ -1,0 +1,43 @@
+- content_for :title do
+	Shipment of NeverFold
+
+- content_for :body do
+
+	= form_tag("/reserve/shipping_submit", remote:true) do
+
+		.group.first.clearfix
+			.label
+				Your shipping address
+
+			.contents
+
+				.row
+					.label Street
+					= text_field_tag "shipping[street1]", ""
+					%div{style:"padding:4px;"}
+					= text_field_tag "shipping[street2]", ""
+				.row
+					.label City
+					= text_field_tag "shipping[city]", @shipping.city
+				.row
+					.label State
+					= text_field_tag "shipping[state]", @shipping.state
+				.row
+					.label Zip Code
+					= text_field_tag "shipping[zip_code]", @shipping.zip_code
+
+		- unless @pledge.reward.supporter?
+			.group.clearfix
+				.label
+					Shipping Cost
+				.contents{style:"font-size:28px;"}
+					- if @pledge.reward.tshirt_only?
+						up to $5.00
+					- else
+						up to $18.00
+						.notes
+							Expected shipping cost based on weight and packaging by FedEx.
+
+		.group.clearfix
+			.contents
+				.button.submit Continue to next step

@@ -1,0 +1,106 @@
+- content_for :title do
+	Press &amp; Media
+
+- content_for :body do
+	.wrapper.press_media
+		.block.resources
+			%p
+				%a{href:"#overview"} Overview
+			%p
+				%a{href:"#digital_media"} Digital Media
+
+			- if false
+				%p
+					%a{href:"#in_the_news"} In the News
+			%p
+				%a{href:"#media_contact"} Media Contact
+
+		.block.overview
+			%h3
+				%a{name:"news"} In the News
+
+			%p
+				%a{href:"http://read.ideafnews.com/2013/03/launchofneverfold/"} The Launch of NeverFold a Raving Success
+				by iDeafNews, March 25, 2013
+
+
+		.block.overview
+			%h3
+				%a{name:"overview"} Overview
+
+			%p NeverFold is a time-saving closet solution composed of two adjustable rods that allow you to drape clothing rather than folding it, resulting in less wrinkles and more closet space.
+
+		.block.digital_media
+			%h3
+				%a{name:"digital_media"} Digital Media
+
+			%p Images and videos of the NeverFold products are available for press and media use.
+
+			.clearfix
+
+				%a{href:"/assets/media/logos/neverfold-colored.svg.zip", "data-track"=>"true", "data-description"=>"NeverFold Logo: Colored"}
+					%img.svg.border{src:"/assets/media/logos/neverfold-colored.svg"}
+				%a{href:"/assets/media/logos/neverfold-on-blue.svg.zip", "data-track"=>"true", "data-description"=>"NeverFold Logo: on Blue"}
+					%img.svg{src:"/assets/media/logos/neverfold-on-blue.svg"}
+				%a{href:"/assets/media/logos/neverfold-on-white.svg.zip", "data-track"=>"true", "data-description"=>"NeverFold Logo: on White"}
+					%img.svg.border{src:"/assets/media/logos/neverfold-on-white.svg"}
+				%a{href:"/assets/media/logos/neverfold-on-black.svg.zip", "data-track"=>"true", "data-description"=>"NeverFold Logo: on Black"}
+					%img.svg{src:"/assets/media/logos/neverfold-on-black.svg"}
+
+				%a{href:"/assets/media/product/drape.jpg.zip", "data-track"=>"true", "data-description"=>"Product Image"}
+					%img{src:"/assets/media/product/drape.jpg"}
+				%a{href:"/assets/media/product/sort.jpg.zip", "data-track"=>"true", "data-description"=>"Product Image"}
+					%img{src:"/assets/media/product/sort.jpg"}
+				%a{href:"/assets/media/product/flip.jpg.zip", "data-track"=>"true", "data-description"=>"Product Image"}
+					%img{src:"/assets/media/product/flip.jpg"}
+				%a{href:"/assets/media/product/grab.jpg.zip", "data-track"=>"true", "data-description"=>"Product Image"}
+					%img{src:"/assets/media/product/grab.jpg"}
+				%a{href:"/assets/media/product/wear.jpg.zip", "data-track"=>"true", "data-description"=>"Product Image"}
+					%img{src:"/assets/media/product/wear.jpg"}
+				%a{href:"/assets/media/product/neverfold-front-rear.jpg.zip", "data-track"=>"true", "data-description"=>"Product Image"}
+					%img{src:"/assets/media/product/neverfold-front-rear.jpg"}
+
+				%a{href:"/assets/media/product/perspective-stacked.jpg.zip", "data-track"=>"true", "data-description"=>"Product Image"}
+					%img{src:"/assets/media/product/perspective-stacked.jpg"}
+
+				%a{href:"/assets/media/headshot/headshot.jpg.zip", "data-track"=>"true", "data-description"=>"Headshot"}
+					%img{src:"/assets/media/headshot/headshot.jpg"}
+
+			.clearfix{style:"margin-top:20px;"}
+				%p.bold Video: Introducing NeverFold (3 minutes)
+				<iframe src="https://player.vimeo.com/video/61929738" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+				%p
+					%p Embed snippet for Introducing NeverFold
+					%code
+						&lt;iframe src="https://player.vimeo.com/video/61929738" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;
+
+				%br/
+
+				%p.bold Video: See how NeverFold works (44 seconds)
+				<iframe src="https://player.vimeo.com/video/61737556" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+				%p
+					%p Embed snippet for See how NeverFold works
+					%code
+						&lt;iframe src="http://player.vimeo.com/video/61737556" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;
+
+				%br/
+
+				%p.bold Video: So easy a 5-year-old can do it! (49 seconds)
+				<iframe src="https://player.vimeo.com/video/61930117" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+				%p
+					%p Embed snippet for So easy a 5-year-old can do it!
+					%code
+						&lt;iframe src="https://player.vimeo.com/video/61930117" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;
+
+
+		.block.media_contact
+			%h3
+				%a{name:"media_contact"} Media Contact
+
+			%p
+				We'd love to answer any questions that you may have at
+				= "#{link_to('media@neverfold.com', 'mailto:media@neverfold.com')}.".html_safe
+
+
+
+

@@ -1,0 +1,43 @@
+﻿.credit_card
+	padding: 5px 10px
+	text-align: left
+	border: 1px solid $black15
+	box-shadow: 0px 2px 5px $black10
+	width: 500px
+	@include radius(6px)
+	@include linear-gradient-vertical(#eee, #eaeaea) /* same as datepicker.css */
+
+	.title
+		font-size: 20px
+		font-weight: 600
+		color: $black40
+		margin-bottom: 20px
+
+	.group
+		margin-bottom: 0px !important
+		border: 0px !important
+
+	.row
+
+		.label
+			text-transform: uppercase
+			font-weight: 600
+			font-size: 12px
+			letter-spacing: 1px
+			text-shadow: 0px 1px 0px white
+			font-color: $black60
+			left: 1px
+			margin-bottom: 2px
+
+		.content
+			input
+				&.month
+					width: 70px
+				&.year
+					width: 100px
+				&.cvc
+					width: 100px
+
+	&> .group .left, &> .group .right
+		width: auto
+

@@ -1,0 +1,7 @@
+if ENV['STRIPE_API_KEY'].present?
+
+	Stripe.api_key = ENV['STRIPE_API_KEY']
+	STRIPE_PUBLISHABLE_KEY = ENV['STRIPE_PUBLIC_KEY']
+	puts ">> STRIPE ENABLED"
+
+end

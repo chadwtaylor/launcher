@@ -1,0 +1,51 @@
+- content_for :title do
+	Confirm Your Pledge
+
+- content_for :body do
+
+
+	.group.first.clearfix.confirm
+
+		.label
+			.notes
+				A friendly reminder, when the funding goal is successfully achieved, your card will be charged on
+				%i= crowdfunding_deadline
+
+		.contents
+
+			.row
+				.label= "Pledged #{number_to_currency(@pledge.reward.amount / 100, precision:0)}"
+				= @pledge.reward.subject
+				%br
+				- unless @pledge.reward.supporter?
+					= @pledge.reward.summary
+				- else
+					Thank you for your contribution. Your support will help make NeverFold a reality.
+
+			- if @reward.tshirt_included
+				.row
+					.label Tee Size
+					= tshirt_size_to_human(@pledge.tshirt_size)
+
+			.row
+				.label Email
+				= @pledge.email
+
+			- if @reward.is_shipable
+				.row
+					.label
+						Shipping
+						= @pledge.reward.tshirt_only? ? "(up to $5)" : "(up to $18)"
+					= @pledge.shipping.street1
+					= "<br />#{@pledge.shipping.street2}".html_safe if @pledge.shipping.street2.present?
+					%br
+					= "#{@pledge.shipping.city}, #{@pledge.shipping.state} #{@pledge.shipping.zip_code}"
+
+				.row
+					.label Shipping
+					Late Summer
+
+	.group.clearfix
+		.contents
+			= form_tag("/reserve/confirm_submit", remote:true) do
+				.button.submit Confirm

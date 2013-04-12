@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	</head>
+	</body>	
+
+		<h2>Congratulations!</h2>
+
+		You have backed NeverFold. Heartfelt thanks!
+
+		<br />
+		<br />
+
+		Pledge Summary
+		<br />
+		<br />
+
+		<b>Amount Pledged</b>
+		<br />
+		<% if @order.reward.supporter? %>
+			<%= number_to_currency(@order.contribution_amount / 100, precision:0) %>
+		<% else %>
+			<%= number_to_currency(@order.reward.amount / 100, precision:0) %>
+		<% end %>
+
+		<br />
+		<br />
+
+		<b>Reward</b>
+		<br />
+		<% if @order.reward.supporter? %>
+			Your supporting contribution is immensesly appreciated!
+		<% else %>
+			<%= @order.reward.summary %>
+		<% end %>
+
+		<br />
+		<br />
+			
+		<% if @order.tshirt_size.present? %>
+			<b>Tee Size</b>
+			<br />
+			<%= tshirt_size_to_human @order.tshirt_size %>
+			<br />
+			<br />
+		<% end %>
+
+		<% if @order.reward.is_shipable %>
+			<b>Shipping <%= @order.reward.tshirt_only? ? "(up to $5)" : "(up to $18)" %></b>
+			<br />
+			Late Summer
+
+			<br />
+			<br />
+		<% end %>
+
+		Help make NeverFold a reality and let your family and friends know you backed this.
+		
+		<br />
+		<br />
+
+		<!-- AddThis Button BEGIN -->
+		<a href="http://api.addthis.com/oexchange/0.8/forward/facebook/offer?pco=tbx32nj-1.0&amp;url=http%3A%2F%2Fwww.neverfold.com&amp;pubid=ra-510d610a29cd620b" target="_blank" ><img src="http://cache.addthiscdn.com/icons/v1/thumbs/32x32/facebook.png" border="0" alt="Facebook" /></a>
+		<a href="http://api.addthis.com/oexchange/0.8/forward/twitter/offer?pco=tbx32nj-1.0&amp;url=http%3A%2F%2Fwww.neverfold.com&amp;pubid=ra-510d610a29cd620b" target="_blank" ><img src="http://cache.addthiscdn.com/icons/v1/thumbs/32x32/twitter.png" border="0" alt="Twitter" /></a>
+		<!-- AddThis Button END -->
+
+	</body>
+</html>

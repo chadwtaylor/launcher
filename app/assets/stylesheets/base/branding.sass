@@ -1,0 +1,110 @@
+﻿$page_width: 1000px
+$page_gutter: 20px
+
+$red: rgba(230,74,74,1)
+$blue: #18b0ff
+$green: #81cc8d
+$yellow: #efea60
+
+$white5: rgba(255,255,255,.05)
+$white10: rgba(255,255,255,.10)
+$white15: rgba(255,255,255,.15)
+$white20: rgba(255,255,255,.20)
+$white25: rgba(255,255,255,.25)
+$white30: rgba(255,255,255,.30)
+$white35: rgba(255,255,255,.35)
+$white40: rgba(255,255,255,.40)
+$white45: rgba(255,255,255,.45)
+$white50: rgba(255,255,255,.50)
+$white55: rgba(255,255,255,.55)
+$white60: rgba(255,255,255,.60)
+$white65: rgba(255,255,255,.65)
+$white70: rgba(255,255,255,.70)
+$white75: rgba(255,255,255,.75)
+$white80: rgba(255,255,255,.80)
+$white85: rgba(255,255,255,.85)
+$white90: rgba(255,255,255,.90)
+$white95: rgba(255,255,255,.95)
+$black5: rgba(0,0,0,.05)
+$black10: rgba(0,0,0,.10)
+$black15: rgba(0,0,0,.15)
+$black20: rgba(0,0,0,.20)
+$black25: rgba(0,0,0,.25)
+$black30: rgba(0,0,0,.30)
+$black35: rgba(0,0,0,.35)
+$black40: rgba(0,0,0,.40)
+$black45: rgba(0,0,0,.45)
+$black50: rgba(0,0,0,.50)
+$black55: rgba(0,0,0,.55)
+$black60: rgba(0,0,0,.60)
+$black65: rgba(0,0,0,.65)
+$black70: rgba(0,0,0,.70)
+$black75: rgba(0,0,0,.75)
+$black80: rgba(0,0,0,.80)
+$black85: rgba(0,0,0,.85)
+$black90: rgba(0,0,0,.90)
+$black95: rgba(0,0,0,.95)
+
+@mixin font-master
+	font-family: 'Open Sans', Arial, sans-serif
+@mixin font-headline
+	font-family: 'Averia Sans Libre', cursive
+@mixin font-writing
+	font-family: 'Averia Sans Libre', cursive
+	/*font-family: 'Annie Use Your Telescope', cursive*/
+
+@mixin centerize
+	margin-left: auto
+	margin-right: auto
+
+@mixin radius($corner)
+	-moz-border-radius: $corner
+	-webkit-border-radius: $corner
+
+@mixin radius-all($tl, $tr, $br, $bl)
+	-moz-border-radius-topleft: $tl
+	-webkit-border-top-left-radius: $tl
+	-moz-border-radius-topright: $tr
+	-webkit-border-top-right-radius: $tr
+	-moz-border-radius-bottomright: $br
+	-webkit-border-bottom-right-radius: $br
+	-moz-border-radius-bottomleft: $bl
+	-webkit-border-bottom-left-radius: $bl
+
+@mixin linear-gradient($from, $to)
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from), to($to))
+	background: -moz-linear-gradient(center top, $from 50%, $to 100%)
+
+@mixin linear-gradient-vertical($from, $to)
+	background: $from
+	background: -moz-linear-gradient(top,  $from 0%, $to 100%)
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$from), color-stop(100%,$to))
+	background: -webkit-linear-gradient(top,  $from 0%,$to 100%)
+	background: -o-linear-gradient(top,  $from 0%,$to 100%)
+	background: -ms-linear-gradient(top,  $from 0%,$to 100%)
+	background: linear-gradient(to bottom,  $from 0%,$to 100%)
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=0 )
+
+@mixin box-shadow($x, $y, $blur, $spread, $color)
+	-moz-box-shadow: $x $y $blur $spread $color
+	-webkit-box-shadow: $x $y $blur $spread $color
+	box-shadow: $x $y $blur $spread $color
+
+@mixin box-shadow-inset($x, $y, $blur, $color)
+	-moz-box-shadow: inset $x $y $blur $color
+	-webkit-box-shadow: inset $x $y $blur $color
+	box-shadow: inset $x $y $blur $color
+
+@mixin bgc-black($alpha)
+	background-color: rgba(0,0,0,$alpha/100)
+@mixin bgc-white($alpha)
+	background-color: rgba(255,255,255,$alpha/100)
+@mixin c-black($alpha)
+	color: rgba(0,0,0,$alpha/100)
+@mixin c-white($alpha)
+	color: rgba(255,255,255,$alpha/100)
+
+@mixin transparency($t)
+	zoom: 1
+	filter: alpha(opacity=$t)
+	opacity: $t / 100

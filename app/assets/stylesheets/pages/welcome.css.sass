@@ -1,0 +1,297 @@
+﻿$intro_left_width: 400px + ($page_gutter * 2)
+
+body.welcome
+
+	section.white
+		background-color: white
+		padding-bottom: 30px
+
+
+	> section .row
+
+		.col
+			width: 440px
+			float: left
+			text-align: center
+
+			&.first
+				margin-right: 80px
+
+		.figure
+			height: 122px
+			@include centerize
+			padding-bottom: 20px
+			vertical-align: bottom
+			display: table-cell
+			width: 440px
+
+			img
+				vertical-align: bottom
+
+		.title
+			font-size: 26px
+			font-weight: 600
+			margin-bottom: 8px
+
+		.description
+			font-size: 22px
+			color: #777
+
+
+	> section .contents, .fixed .contents
+		width: 960px
+		@include centerize
+		position: relative
+
+	.fixed
+		position: fixed
+		top: 0px
+		width: 100%
+		z-index: 999
+
+	section.campaign
+		background-color: black
+		color: white
+		padding: 10px 0px
+
+		.tracker
+			float: left
+
+			.group, .row
+				display: inline-block
+
+			.group
+				margin-right: 40px
+
+			.count
+				color: white
+				font-size: 24px
+
+			.label
+				color: #888
+
+		.button
+			float: right
+			width: 280px
+
+			.small
+				display: inline-block
+				margin-left: 10px
+
+		.learn
+			font-size: 10px
+			top: -2px
+			text-decoration: underline
+
+	section.links
+		background-color: #5b7483
+		padding: 5px
+		border-bottom: 1px solid $black40
+		@include box-shadow(0px, 2px, 10px, 5px, $black40)
+		z-index: 1
+
+		a
+			text-shadow: 0px 2px 2px $black50
+			margin-right: 40px
+
+		.facebook
+			background: url('/assets/welcome/v2/contact_facebook.png')
+			width: 9px
+			height: 16px
+			top: 3px
+
+		.twitter
+			background: url('/assets/welcome/v2/contact_twitter.png')
+			width: 16px
+			height: 14px
+			top: 5px
+
+		.right
+			right: -40px
+			a
+				float: right
+
+
+	header
+		background: url('/assets/welcome/bg_closet_blur.jpg') center top repeat-x
+		height: 500px
+
+		section
+			position: relative
+			width: $page_width
+			@include centerize
+			padding: 0px $page_gutter
+
+		.row.first
+			padding: 25px 0px
+
+		.logo
+			background: url('/assets/welcome/neverfold_logo.png') no-repeat
+			width: 271px
+			height: 64px
+			float: left
+			left: 0px
+			top: 30px
+
+		.tagline
+			color: white
+			text-shadow: 0px 1px 2px black
+			font-size: 26px
+			font-weight: 300
+			left: 370px
+			top: 28px
+			float: left
+
+		.see_how_it_works
+			background: url('/assets/welcome/v2/seehowitworks.png')
+			width: 219px
+			height: 58px
+			float: right
+			top: 15px
+			right: -17px
+
+		.row.second
+			top: 30px
+		.video
+			top: -10px
+
+		.kid
+			left: 50px
+			top: 8px
+
+
+			.figure
+				background: url('/assets/welcome/v2/5-year-old.jpg')
+				width: 71px
+				height: 40px
+				float: left
+				z-index: 1
+
+			.caption
+				background-color: black
+				@include radius(4px)
+				color: white
+				float: left
+				font-size: 13px
+				padding: 5px 15px 5px 30px
+				left: -15px
+				top: 5px
+
+				.content
+					background-image: url('/assets/welcome/v2/triangle-right.png')
+					background-position: right 3px
+					padding-right: 25px
+
+		.right
+			top: -25px
+
+		.group
+			&> div
+				float: right
+				margin-left: 20px
+				margin-bottom: 20px
+
+			.label
+				font-size: 20px
+				font-weight: 700
+				color: white
+				text-shadow: 0px 2px 2px $black75
+				top: 40px
+
+			.step
+				width: 36px
+				height: 36px
+				top: 35px
+
+				&.one
+					background: url('/assets/welcome/v2/step1.png')
+				&.two
+					background: url('/assets/welcome/v2/step2.png')
+				&.three
+					background: url('/assets/welcome/v2/step3.png')
+
+			.figure
+				width: 185px
+				height: 105px
+				background-color: white
+				border: 2px solid $blue
+				@include box-shadow(0px, 4px, 8px, 0px, $black60)
+
+				&.stack_drape
+					background: url('/assets/welcome/v2/step_drape.png')
+				&.stack_drape.next
+					background: url('/assets/welcome/v2/step_stack.png')
+				&.sort_flip
+					background: url('/assets/welcome/v2/step_flip.png')
+				&.sort_flip.next
+					background: url('/assets/welcome/v2/step_sort.png')
+				&.grab_wear
+					background: url('/assets/welcome/v2/step_grab.png')
+				&.grab_wear.next
+					background: url('/assets/welcome/v2/step_wear.png')
+
+
+	section.description
+		background-color: black
+
+		.contents
+			font-size: 24px
+			color: white
+			padding: 20px 0px
+			font-weight: 100
+
+	section.testimonials
+		background: url('/assets/welcome/bg_demin.jpg') center top
+		border-top: 1px solid $black50
+		border-bottom: 1px solid $black50
+		padding: 20px 0px
+
+		.contents
+			font-size: 18px
+			font-weight: 600
+			color: white
+			background-color: $black75
+			padding: 20px
+			@include radius(10px)
+			text-align: center
+			text-shadow: 0px 2px 2px black
+
+			.who
+				display: inline-block
+
+
+	section.breakdown
+		.figure
+			height: 140px
+
+			img
+				border: 8px solid white
+				@include box-shadow(0px, 2px, 4px, 1px, $black20)
+
+	section.idea
+
+		background: url('/assets/welcome/bg_bamboo.jpg') center top
+		color: white
+		padding-top: 50px
+
+		h2
+			color: white
+			text-shadow: 0px 3px 2px $black40
+			margin-bottom: 40px
+
+		.row
+
+			.group
+				display: inline-block
+				text-align: center
+				margin-right: 20px
+				margin-bottom: 80px
+
+				&:last-child
+					margin-right: 0px
+
+		.caption
+			@include font-writing
+			font-size: 22px
+			text-shadow: 0px 2px 2px black
+

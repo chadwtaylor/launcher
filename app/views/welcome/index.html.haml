@@ -1,0 +1,266 @@
+
+.fixed
+	.contents
+
+	%section.campaign.clearfix
+		.contents
+
+			.tracker.clearfix
+				.group.backers
+					.row.count= Order.total_orders
+					.row.label ordered
+				.group.goal
+					.row.count= number_to_currency(Order.grand_total, precision:0)
+					.row.label
+						of
+						= number_to_currency(ENV['CROWDFUNDING_GOAL'], precision:0)
+						raised
+				.group.days
+					.row.count= campaign_days_left
+					.row.label days left
+
+				%a.learn{href:"/faq#crowdfunding"}
+					what is crowdfunding?
+
+			%a{href:"/reserve"}
+				.button
+					Pre-Order Now
+					.small Starting at $29
+
+	%section.links.clearfix
+		.contents
+
+			.left{style:"width:600px;"}
+				%a{href:"/about"} About
+				%a{href:"/how_it_works"} How It Works
+				%a{href:"/faq"} FAQ
+				%a{href:"#{ENV['BLOG']}"} Blog
+				%a{href:"/press_media"} Press & Media
+
+			.right{style:"width:300px;"}
+				%a{href:"#{ENV['TWITTER']}"}
+					.twitter
+				%a{href:"#{ENV['FACEBOOK']}"}
+					.facebook
+				= contact_us_link "<div class='link'>Contact</div>".html_safe
+
+- # ---------------------------------------------------------------------------------------------------------
+
+.gap{style:"height:85px;"}
+
+- # ---------------------------------------------------------------------------------------------------------
+
+%header
+	%section.intro.page.clearfix
+
+		.flash{style:"position:absolute; width:960px; top:20px; z-index:1; text-align:center;"}
+			- if flash[:error]
+				.error= flash[:error]
+			- elsif flash[:notice]
+				.notice= flash[:notice]
+
+		.row.first.clearfix
+			.logo
+			.tagline
+				Time Saving Closet Solution
+			%a{href:"/how_it_works"}
+				.see_how_it_works
+
+		.row.second.clearfix
+			.left
+				.video
+					<iframe src="http://player.vimeo.com/video/61929738" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+
+				%a{href:"https://www.vimeo.com/neverfold/so-easy-a-5-year-old-can-do-it"}
+					.kid
+						.figure
+						.caption
+							.content
+								See how a 5-year-old can put away his laundry!
+
+			.right
+
+				.group.clearfix.rollover
+					.figure.stack_drape
+					.step.one
+					.label
+						Stack &amp; Drape
+
+				.group.clearfix.rollover
+					.figure.sort_flip
+					.step.two
+					.label
+						Sort &amp; Flip
+
+				.group.clearfix.rollover
+					.figure.grab_wear
+					.step.three
+					.label
+						Grab &amp; Wear
+
+- # ---------------------------------------------------------------------------------------------------------
+
+%section.description
+	.contents
+		NeverFold is a time-saving closet solution composed of two adjustable rods that allow you to drape clothing rather than folding it, resulting in less wrinkles and more closet space.
+
+- # ---------------------------------------------------------------------------------------------------------
+
+%section.benefits.white
+	.contents
+
+		%h2 Benefits of NeverFold
+
+		.row.clearfix
+
+			.col.first
+				.figure
+					%img{src:"/assets/welcome/benefits/stopwatch.jpg"}
+				.title
+					Save time
+				.description
+					Drape clothes instead of
+					%br
+					folding individual ones.
+
+			.col{style:"top:-9px;"}
+				.figure
+					%img{src:"/assets/welcome/benefits/walkin.jpg"}
+				.title
+					Free up closet space
+				.description
+					NeverFold is a small closet accessory that absorbs a closet full of hung t-shirts.
+
+		.row.clearfix
+
+			.col.first
+				.figure
+					%img{src:"/assets/welcome/benefits/do-not-iron.jpg"}
+				.title Phase out ironing
+				.description
+					Draping results in less
+					%br
+					wrinkles than folding.
+
+			.col
+				.figure
+					%img{src:"/assets/welcome/benefits/tshirt-bumps.jpg"}
+				.title Bumps be gone
+				.description
+					Dump the bumps by getting
+					%br
+					rid of your hangers
+
+- # ---------------------------------------------------------------------------------------------------------
+
+%section.testimonials
+	.contents
+
+		.flexslider
+			%ul.slides
+
+				%li
+					It certainly saved my marriage, thank you!
+					.who
+						&dash; Tara Holcomb
+
+				%li
+					My chair in the bedroom used to be my NeverFold.
+					.who
+						&dash; College Student
+
+				%li
+					I hated laundry. After NeverFold, I love laundry!
+					.who
+						&dash; Brendan Gramer
+
+				/
+					%li
+						.block{style:"top:10px; font-size:18px;"}
+							Help make NeverFold a reality by spreading the word.
+							.social_media_buttons
+								= render partial:"/components/social_media_buttons"
+
+- # ---------------------------------------------------------------------------------------------------------
+
+%section.breakdown.white
+	.contents
+		%h2 What's what in NeverFold
+
+		.row.clearfix
+
+			.col.first
+				.figure
+					%img{src:"/assets/welcome/breakdown/bamboo.jpg"}
+				.title Exotic Wood
+				.description
+					This sleek piece of caramelized bamboo, poplar and walnut is a sturdy, natural timber that will mesh into your closet well.
+
+			.col
+				.figure
+					%img{src:"/assets/welcome/breakdown/nonslip.jpg"}
+				.title No Slip and Falls
+				.description
+					Attractive wooden rods are selected to complement the exotic wood. It has silicone-based non-slip surface to prevent your stack from sliding off.
+
+		.row.clearfix{style:"margin-top:40px;"}
+
+			.col.first
+				.figure
+					%img{src:"/assets/welcome/breakdown/adjustlock.jpg"}
+				.title Adjust and Lock
+				.description
+					Adjust distances between the rods depending on your stack's thickness. Rods snap in place prevent NeverFold from rolling your stash over.
+
+			.col
+				.figure
+					%img{src:"/assets/welcome/breakdown/usaflag.jpg"}
+				.title Made in the USA
+				.description
+					The bars are hand-cut, sanded, and assembled individually by a skilled woodsman right here in the United States, not from a factory overseas.
+
+- # ---------------------------------------------------------------------------------------------------------
+
+%section.idea
+	.contents
+		%h2 From a shower idea to prototype
+
+		.row.clearfix
+
+			.group
+				%img{src:"/assets/welcome/idea_sketches.png"}
+				.caption Early conceptual sketches
+
+			.group
+				%img{src:"/assets/welcome/idea_blueprints.png"}
+				.caption Concept to CAD
+
+			.group
+				%img{src:"/assets/welcome/idea_render.png"}
+				.caption 3D Rendering
+
+		.row.clearfix
+
+			.group{style:'margin:20px;'}
+				%img{src:"/assets/welcome/idea_build_prototype.png"}
+				.caption First prototype crafted
+
+			.group{style:'margin:40px;'}
+				%img{src:"/assets/welcome/idea_prototyping.png"}
+				.caption Testing in the closet
+
+			.group
+				%img{src:"/assets/welcome/idea_ready.png"}
+				.caption Ready to meet you (soon).
+
+- # ---------------------------------------------------------------------------------------------------------
+
+
+%section.white{style:"text-align: center; padding: 30px;"}
+
+	%a{href:"/reserve"}
+		.button{style:"font-size:40px; padding: 10px 40px;"}
+			Pre-Order Your NeverFold Today!
+			.small{style:"font-size:20px;"}
+				Starting at $29
+

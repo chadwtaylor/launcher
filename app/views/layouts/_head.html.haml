@@ -1,0 +1,67 @@
+%title
+	= generate_head_title  #@title or generate_head_title
+
+- if @description.blank?
+	- @description = ENV['META_DESCRIPTION']
+
+%meta{:content => "#{ENV['ORGANIZATION']}", :name => "author"}/
+%meta{:content => "#{ENV['ORGANIZATION']}", :name => "publisher"}/
+%meta{:content => "#{ENV['ORGANIZATION']}", :name => "copyright"}/
+%meta{:content => "ALL", :name => "robots"}/
+%meta{:content => @description, :name => "description"}/
+
+= stylesheet_link_tag "application"
+%link{href:'https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,300,400,600,700|Averia+Sans+Libre|Annie+Use+Your+Telescope', rel:'stylesheet', type:'text/css'}
+
+= csrf_meta_tags
+
+= yield :stylesheets
+
+- if Rails.env.production?
+
+	- if ENV['GOOGLE_ANALYTICS'].present?
+		%script{type:"text/javascript"}
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', "#{ENV['GOOGLE_ANALYTICS']}"]);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+
+	- if ENV['GOSQUARED_ACCOUNT'].present?
+		%script{type:"text/javascript"}
+			var GoSquared = {};
+			GoSquared.acct = "#{ENV['GOSQUARED_ACCOUNT']}";
+			(function(w){
+			function gs(){
+			w._gstc_lt = +new Date;
+			var d = document, g = d.createElement("script");
+			g.type = "text/javascript";
+			g.src = "//d1l6p2sc9645hc.cloudfront.net/tracker.js";
+			var s = d.getElementsByTagName("script")[0];
+			s.parentNode.insertBefore(g, s);
+			}
+			w.addEventListener ?
+			w.addEventListener("load", gs, false) :
+			w.attachEvent("onload", gs);
+			})(window);
+
+	- if ENV['WOOPRA_SET_DOMAIN'].present?
+		%script{type:"text/javascript"}
+			function woopraReady(tracker) {
+			tracker.setDomain("#{ENV['WOOPRA_SET_DOMAIN']}");
+			tracker.setIdleTimeout(1800000);
+			tracker.trackPageview({type:'pageview',url:window.location.pathname+window.location.search,title:document.title});
+			return false;
+			}
+			(function() {
+			var wsc = document.createElement('script');
+			wsc.src = document.location.protocol+'//static.woopra.com/js/woopra.js';
+			wsc.type = 'text/javascript';
+			wsc.async = true;
+			var ssc = document.getElementsByTagName('script')[0];
+			ssc.parentNode.insertBefore(wsc, ssc);
+			})();

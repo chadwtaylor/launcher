@@ -1,0 +1,36 @@
+
+.credit_card.clearfix
+
+	.title
+		Credit Card
+
+	.row{style:"margin-bottom: -15px !important;"}
+		.label
+			Card Number
+		.content
+
+			= # text_field_tag "card[number]", "", placeholder:"1000-2000-3000-4000" # Valid Card
+			= text_field_tag "card[number]", (Rails.env.development? ? "4012 8888 8888 1881" : ""), placeholder:"1000-2000-3000-4000" # Valid Card
+			= # text_field_tag "card[number]", "4000000000000101", placeholder:"1000-2000-3000-4000" # Invalid CVC
+			= # text_field_tag "card[number]", "4000000000000036", placeholder:"1000-2000-3000-4000" # Invalid Zip
+
+	.group.clearfix{style:"margin-bottom: 10px !important;"}
+		.row.left
+			.label
+				Expiration Date
+			.content
+				= text_field_tag "card[expire_month]", (Rails.env.development? ? "12" : ""), placeholder:"MM", class:"month"
+				= text_field_tag "card[expire_year]", (Rails.env.development? ? "14" : ""), placeholder:"YY", class:"year"
+
+		.row.right
+			.label
+				CVC CODE
+			.content
+				= text_field_tag "card[cvc]", (Rails.env.development? ? "111" : ""), placeholder:"101", class:"cvc"
+
+	.row{style:"margin-bottom: 5px;"}
+		.label
+			Name on Card
+		.content
+			= text_field_tag "card[full_name]", (Rails.env.development? ? "John Doe" : "")
+
