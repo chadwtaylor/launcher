@@ -45,7 +45,8 @@ There are few essential files that you must edit to get Launcher up and running.
 
 * rename file `config/application.yml.example` to `config/application.yml` and edit the file
 * rename file `config/database.yml.example` renamed to `config/database.yml` and edit the file
-* edit `db/seed.rb` with offered rewards to your backers
+* edit `db/seed.rb` to build your rewards
+* edit `config/routes.rb` to route your social media requests
 
 ### Get Launcher running
 
@@ -65,35 +66,9 @@ Launcher Wish List
 
 * Amazon Payment as an alternate form of collecting funds
 
-
-
-Rails Installation
-------------------
-
-- Figaro gem used to define application configurations (see config/application.yml.example)
-
-- seed.rb to feed data into tables
-
-- edit route.rb to define routings especially for facebook, twitter, blog, etc..
-
-
 BENEFITS OF LAUNCHER
 - Supports t-shirt (Kickstarter requires you to contact your backers individually to get their t-shirt sizes -- cumberstone!)
 - Kickstarter keeps 5% of your earnings... with Launcher, you don't waste anything.
 - Save yourself from countless hours of integrating third-party services.
 
-
-GETTING STARTED
-
-- download Launcher
-- copy application.yml.example and rename to application.yml
-- edit application.yml
-- copy database.yml.example and rename to database.yml
-- edit database.yml
-- run rake db:migrate
-- run rake db:seed
-
-If using heroku... rake figaro:heroku (this will copy configs from application.yml to heroku)
-
-assetize the pipeline (to convert facebook.js.erb to facebook.js using application configs)
 

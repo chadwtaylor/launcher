@@ -2,9 +2,6 @@ Launcher::Application.routes.draw do
 
   match '/privacy', to: 'legals#privacy_policy', action: :privacy
   match '/terms', to: 'legals#terms_of_use', action: :terms
-  match '/prelaunch', to: 'welcome#index', action: :prelaunch
-  match '/v1', to: 'welcome#v1', action: :v1
-  match '/v2', to: 'welcome#v2', action: :v2
 
   match '/facebook' => redirect("http://www.facebook.com/NeverFold")
   match '/twitter' => redirect("http://www.twitter.com/NeverFold")
