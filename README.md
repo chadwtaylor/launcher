@@ -33,42 +33,38 @@ Supported Third-Party Services
 Getting Started
 ---------------
 
-### Signing up for third-party services
+### Setting up your database
 
-Refer to `application.yml.example` for details and links to sign up for your accounts.
-
-You will at the most need assigned API keys to enable your third-party services with Launcher.
+In this project, we used Postgres and it is free to install from http://postgresapp.com.
 
 ### Configuring Launcher
 
 There are few essential files that you must edit to get Launcher up and running.
 
-* rename file `config/application.yml.example` to `config/application.yml` and edit the file
-* rename file `config/database.yml.example` renamed to `config/database.yml` and edit the file
-* edit `db/seed.rb` to build your rewards
-* edit `config/routes.rb` to route your social media requests
+* rename file `config/application.yml.example` to `config/application.yml` and edit the file.
+* rename file `config/database.yml.example` renamed to `config/database.yml` and edit the file.
+* edit `db/seed.rb` to build your own rewards.
+* edit `config/routes.rb` to route your social media requests.
+
+### Signing up for third-party services
+
+Refer to `application.yml` for details and links to sign up for your accounts.
+
+You will at the most need assigned API keys to enable your third-party services with Launcher. Once you have those API keys in hand, update `config/application.yml`
 
 ### Get Launcher running
 
-1. run `rake db:migrate`
+1. run `rake db:migrate` (make sure your database is set up first)
 2. run `rake db:seed`
 3. start the server
 
 ### Using Heroku
 
-If you're using Heroku, you can copy the application.yml configurations over with one line of command in terminal:
+If you're using Heroku, you can copy the `application.yml` configurations over with one line of command in terminal:
 
     rake figaro:heroku
-
 
 Launcher Wish List
 ------------------
 
 * Amazon Payment as an alternate form of collecting funds
-
-BENEFITS OF LAUNCHER
-- Supports t-shirt (Kickstarter requires you to contact your backers individually to get their t-shirt sizes -- cumberstone!)
-- Kickstarter keeps 5% of your earnings... with Launcher, you don't waste anything.
-- Save yourself from countless hours of integrating third-party services.
-
-
