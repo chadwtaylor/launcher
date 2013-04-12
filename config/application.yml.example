@@ -47,7 +47,7 @@ TWITTER_DESCRIPTION: Wasting time folding laundry? NeverFold has the solution.
 # Free!
 # http://www.google.com/analytics/
 # ------------------------------------------------------------------------------------------------------
-GOOGLE_ANALYTICS: UA-12345678-9
+# GOOGLE_ANALYTICS: UA-12345678-9
 
 # ------------------------------------------------------------------------------------------------------
 # stripe - Payment Processing Service
@@ -60,32 +60,32 @@ STRIPE_PUBLIC_KEY: pk_live_abc123DEF456ghi
 
 # use this if you want to use Stripe's sandbox environment for development/testing purposes;
 # otherwise, remove the development block below.
-development:
-  STRIPE_API_KEY: sk_test_abc123DEF456ghi
-  STRIPE_PUBLIC_KEY: pk_test_abc123DEF456ghi
+# development:
+#   STRIPE_API_KEY: sk_test_abc123DEF456ghi
+#   STRIPE_PUBLIC_KEY: pk_test_abc123DEF456ghi
 
 # ------------------------------------------------------------------------------------------------------
 # Airbrake - Error / Exception Notification Service
 # Free start-up plan: https://signup.airbrake.io/account/new/Free
 # ------------------------------------------------------------------------------------------------------
-AIRBRAKE_API_KEY: abc123DEF456ghi
-AIRBRAKE_SECURE: true # change to true if your website is using SSL
+# AIRBRAKE_API_KEY: abc123DEF456ghi
+# AIRBRAKE_SECURE: true # change to true if your website is using SSL
 
 # ------------------------------------------------------------------------------------------------------
 # Geocoder - Geotagging Service
 # In this application, Bing Map is used
 # Get your API key from https://www.bingmapsportal.com
 # ------------------------------------------------------------------------------------------------------
-GEOCODER_API_KEY: abc123DEF456ghi
+# GEOCODER_API_KEY: abc123DEF456ghi
 
 # ------------------------------------------------------------------------------------------------------
 # MailChimp - Email Newsletter / Subscription Service
 # Free 12,000 emails delivered a month
 # https://login.mailchimp.com/signup
 # ------------------------------------------------------------------------------------------------------
-MAILCHIMP_API_KEY: abc123DEF456ghi
-MAILCHIMP_LIST_BACKERS: 1234567890 # mailing list for general subscribers
-MAILCHIMP_LIST_GENERAL: 0987654321 # mailing list of backers
+# MAILCHIMP_API_KEY: abc123DEF456ghi
+# MAILCHIMP_LIST_BACKERS: 1234567890 # mailing list for general subscribers
+# MAILCHIMP_LIST_GENERAL: 0987654321 # mailing list of backers
 
 # ------------------------------------------------------------------------------------------------------
 # Woopra - Live Traffic Monitoring Service
@@ -93,20 +93,20 @@ MAILCHIMP_LIST_GENERAL: 0987654321 # mailing list of backers
 # NOTE: Woopra is expensive, starting at $79 a month; but the best live monitoring service out there
 # 		  GoSquared (see below) is a cheaper alternative starting at $9 a month
 # ------------------------------------------------------------------------------------------------------
-WOOPRA_SET_DOMAIN: neverfold.com
+# WOOPRA_SET_DOMAIN: neverfold.com
 
 # ------------------------------------------------------------------------------------------------------
 # GoSquared - Live Traffic Monitoring Service
 # Free to sign up: https://www.gosquared.com/join?free
 # NOTE: This is a cheaper alternative to Woopra
 # ------------------------------------------------------------------------------------------------------
-GOSQUARED_ACCOUNT: GSN-123456-V
+# GOSQUARED_ACCOUNT: GSN-123456-V
 
 # ------------------------------------------------------------------------------------------------------
 # Zendesk - Support Ticketing System
 # Starter plan is $20 a year
 # http://www.zendesk.com/product/pricing
 # ------------------------------------------------------------------------------------------------------
-ZENDESK_DROPBOX_ID: 12345678
-ZENDESK_URL: https://neverfold.zendesk.com
+# ZENDESK_DROPBOX_ID: 12345678
+# ZENDESK_URL: https://neverfold.zendesk.com
 

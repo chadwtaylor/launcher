@@ -5,6 +5,10 @@
 
 	%body{class:"subpage#{' aside' if aside_enabled?} #{params[:controller]}", "data-tab"=>"#{params[:controller]}/#{params[:action]}"}
 
+		- if ENV['FACEBOOK_APP_ID']
+			#fb-root
+			%script{src:"http://connect.facebook.net/en_US/all.js"}
+
 		= render partial:'layouts/header'
 
 		%section.body.clearfix

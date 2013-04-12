@@ -5,8 +5,9 @@
 
 	%body.welcome
 
-		#fb-root
-		%script{src:"http://connect.facebook.net/en_US/all.js"}
+		- if ENV['FACEBOOK_APP_ID']
+			#fb-root
+			%script{src:"http://connect.facebook.net/en_US/all.js"}
 
 		= yield
 
