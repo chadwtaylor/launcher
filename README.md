@@ -1,3 +1,31 @@
+Launcher
+========
+
+Launcher allows you to build your own crowdfunding platform. It also support many popular third-party services such as Stripe, Airbrake, Zendesk and more!
+
+Disclaimers
+-----------
+
+This is self-promotion for NeverFold in exchange for open-sourcing our own crowdfunding platform after being rejected by Kickstarter on the basis of 'home improvement'.
+
+Examples are the best teaching tools so we're using NeverFold's real-world experiences in this project. Feel free to re-use contents and alter them however you see fit.
+
+We strongly encourage you to come up with your own Privacy Policy and Terms -- we have left those intact as a guidance for your next big thing!
+
+Lastly but not least, this project assumes you are comfortable with Rails.
+
+Good luck!
+
+Getting Started
+---------------
+
+
+
+
+
+Rails Installation
+------------------
+
 Instructions for Lanucher (couresty of NeverFold)
 
 - starting point for you to build your own solution
