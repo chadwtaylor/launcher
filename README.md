@@ -68,3 +68,10 @@ Launcher Wish List
 ------------------
 
 * Amazon Payment as an alternate form of collecting funds
+
+Contact
+-------
+
+Please contact me at `launcher (at) neverfold (dot) com` if you're using this project for your next big thing. I'll add your website to the list here.
+
+Again, good luck!
