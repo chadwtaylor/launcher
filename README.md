@@ -1,5 +1,7 @@
 Instructions for Lanucher (couresty of NeverFold)
 
+- starting point for you to build your own solution
+
 - Legals (privacy policy and terms -- you're welcome to use it; but it is recommended you draft your own)
 
 - Figaro gem used to define application configurations (see config/application.yml.example)
