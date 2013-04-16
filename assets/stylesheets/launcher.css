@@ -1,0 +1,147 @@
+
+html, body {
+	padding: 0px;
+	margin: 0px;
+	font-family: 'Open Sans', Arial, sans-serif;
+	color: #8b8b8b;
+}
+
+dl, menu, ol, ul {
+    margin: 0em 0;
+}
+
+dd {
+    margin: 0 0 0 0px;
+}
+
+menu, ol, ul {
+}
+
+nav ul, nav ol {
+    list-style: none;
+    list-style-image: none;
+}
+
+a, a:hover, a:visited {
+	color: #18b0ff;
+}
+
+.button {
+	background-color: #18b0ff;
+	display: inline-block;
+	color: white;
+	font-size: 30px;
+	padding: 20px 40px;
+	text-shadow: 0px -1px 0px rgba(0,0,0,0.50);
+	border: 1px solid rgba(0,0,0,0.25);
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+.button.fork {
+	margin-bottom: 40px;
+}
+
+.wrapper {
+	width: 950px;
+	text-align: center;
+	margin: 0px auto;
+}
+
+.dark-font {
+	color: #3e3e3e;
+}
+
+.intro {
+	text-align: center;
+	position: relative;
+	margin-top: 80px;
+	margin-bottom: 40px;
+}
+
+.intro > div {
+	display: inline-block;
+	position: relative;
+}
+
+.title {
+	font-weight: 700;
+	letter-spacing: -3px;
+	font-size: 54px;
+	width: 400px;
+	top: -70px;
+}
+
+.rocket {
+	background: url("../images/rocket.png");
+	width: 127px;
+	height: 168px;
+}
+
+.tagline {
+	width: 400px;
+	font-weight: 100;
+	font-size: 36px;
+	letter-spacing: -1px;
+	top: -55px;
+}
+
+.divider {
+	background: url("../images/divider.png") no-repeat top center;
+	height: 20px;
+}
+
+.zone {
+	padding: 40px 0px;
+	font-weight: 200;
+	/*width: 800px;*/
+	margin: 0px auto;
+}
+
+.zone .headline {
+	font-size: 40px;
+	font-weight: 200;
+	letter-spacing: -1px;
+	color: #3e3e3e;
+	margin-bottom: 10px;
+}
+
+.zone .headline b {
+	font-weight: 400;
+}
+
+.zone .story {
+	font-size: 25px;
+}
+
+.zone .story ul {
+	text-align: left;
+	width: 400px;
+	margin: 0px auto;
+}
+
+.zone .story li {
+	margin-bottom: 5px;
+}
+
+.zone .note {
+	font-size: 18px;
+	font-style: italic;
+}
+
+.zone .service {
+	width: 200px;
+	height: 100px;
+	margin: 0px auto;
+	display: inline-block;
+}
+
+.zone img {
+}
+
+.zone img.last {
+	padding: 0px;
+}
+
+
+
