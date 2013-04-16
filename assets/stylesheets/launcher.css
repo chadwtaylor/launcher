@@ -81,7 +81,7 @@ a, a:hover, a:visited {
 .tagline {
 	width: 400px;
 	font-weight: 100;
-	font-size: 36px;
+	font-size: 32px;
 	letter-spacing: -1px;
 	top: -55px;
 }
@@ -138,10 +138,4 @@ a, a:hover, a:visited {
 
 .zone img {
 }
-
-.zone img.last {
-	padding: 0px;
-}
-
-
 
