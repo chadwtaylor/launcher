@@ -6,15 +6,15 @@ Launch your own crowdfunding platform.
 Disclaimers
 -----------
 
-This is self-promotion for NeverFold in exchange for open-sourcing our own crowdfunding platform after being rejected by Kickstarter on the basis of 'home improvement'.
+This is a self-promotion for NeverFold in exchange for open-sourcing our own crowdfunding platform after being rejected by Kickstarter on the basis of 'home improvement'.
 
-Examples are the best teachers so we're using NeverFold's real-world experiences in this project. Feel free to re-use contents and alter them however you see fit.
+Actual examples are the best teachers so we're using NeverFold's actual experiences in this project. Feel free to re-use content and alter them however you see fit.
 
-We strongly encourage you to come up with your own Privacy Policy and Terms -- we have left those intact as a guidance for your next big thing!
+We strongly encourage you to come up with your own Privacy Policy and Terms -- we left that intact as a guide for your next big thing!
 
 Stripe is used for payment processing.
 
-Lastly but not least, this project assumes you are comfortable with Rails. NeverFold is not responsible for anything that goes wrong with your project.
+Last but not least, this project assumes you are comfortable with Rails. NeverFold is not responsible for anything that may go wrong with your project.
 
 Good luck!
 
